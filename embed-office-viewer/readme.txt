@@ -1,7 +1,7 @@
 === Document Viewer-  Plugin to Display MS Office Docs ===
 Contributors: abuhayat,bplugins,shehabulislam, freemius
 Tags: Embed document, ms word, pdf, document viewer
-Requires at least: 5.7
+Requires at least: 5.7+
 Tested up to: 6.6.2
 Stable tag: 2.2.9
 Requires PHP: 7.1
