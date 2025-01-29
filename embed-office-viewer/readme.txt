@@ -2,14 +2,14 @@
 Contributors: abuhayat,bplugins,shehabulislam, freemius
 Tags: Embed document, ms word, pdf, document viewer
 Requires at least: 5.7+
-Tested up to: 6.6.2
-Stable tag: 2.2.9
+Tested up to: 6.7.1
+Stable tag: 2.2.10
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-With the Document Viewer for Office plugin, you can view Microsoft Word, Excel, PowerPoint, and more files in WordPress using shortcode
+With the Document Viewer for Office plugin, you can view Microsoft Word, Excel, PowerPoint, and more files in WordPress using Shortcode
 
 == Description ==
 
@@ -127,6 +127,9 @@ Thanks for your interest. You can donate any amount by visiting  [Here](https://
 
 
 == Changelog ==
+
+= 2.2.10 - 29 Jan, 2025 =
+* Update: WordPress SDK
 
 = 2.2.9 - 04/07/2024 =
 * Update: WordPress SDK
