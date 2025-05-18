@@ -1,15 +1,15 @@
 === Document Viewer-  Plugin to Display MS Office Docs ===
-Contributors: abuhayat,bplugins,shehabulislam, freemius
+Contributors: bplugins,shehabulislam, taninrahman, freemius
 Tags: Embed document, ms word, pdf, document viewer
-Requires at least: 5.7+
-Tested up to: 6.7.1
-Stable tag: 2.2.10
+Requires at least: 5.6
+Tested up to: 6.8.1
+Stable tag: 2.3.0
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-With the Document Viewer for Office plugin, you can view Microsoft Word, Excel, PowerPoint, and more files in WordPress using Shortcode
+With the Document Viewer for Office plugin, you can view Microsoft Word, Excel, PowerPoint, and more files in WordPress using shortcode
 
 == Description ==
 
@@ -17,7 +17,7 @@ If you have Office documents on your website or blog that you want your readers 
 
 This WordPress plugin offers seamless integration of document viewing using two popular viewer types: Google Doc Viewer and Microsoft Online Viewer. Easily customize the layout of your documents by adjusting width and height settings to match your desired design.
 
-Unlock additional features with the pro version, including the ability to select documents directly from Google Drive, OneDrive, or Dropbox. View documents using the Google Doc Viewer for enhanced compatibility and functionality. 
+Unlock additional features with the pro version, including the ability to select documents directly from Google Drive, or Dropbox. View documents using the Google Doc Viewer for enhanced compatibility and functionality. 
 
 Control user experience by enabling or disabling pop-out options, displaying or hiding the file name at the top, and toggling the download button for easy access.
 
@@ -42,7 +42,6 @@ Enhance document security by enabling or disabling right-click functionality as 
 ### Document Viewer Pro Features
 
 - Choose Document From Google Drive
-- Choose Document From OneDrive
 - Choose Document From Dropbox
 - View Document by Google Doc Viewer
 - Disable/Enable Pop-out
@@ -127,6 +126,9 @@ Thanks for your interest. You can donate any amount by visiting  [Here](https://
 
 
 == Changelog ==
+
+= 2.3.0 - 10 May, 2025 =
+* Fixed textdomain issue & add powerfull Gutenberg block
 
 = 2.2.10 - 29 Jan, 2025 =
 * Update: WordPress SDK

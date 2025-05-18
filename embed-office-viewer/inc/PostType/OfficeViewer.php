@@ -22,16 +22,18 @@ class Shortcode{
             add_action('admin_head-post-new.php', [$this, 'eov_hide_publishing_actions']);
 
         }
+        // Add Help Pages
+        add_action( 'admin_menu', [$this, 'ovp_help_pages'] );
     }
 
-    public static function instance(){
+    public static function instance() {
         if(self::$_instance === null){
             self::$_instance = new self();
         }
         return self::$_instance;
     }
 
-    function ovp_create_post_type(){
+    function ovp_create_post_type() {
         register_post_type( 'officeviewer', array(
             'labels'              => array(
             'name'          => __( 'Office Viewer' ),
@@ -83,7 +85,7 @@ class Shortcode{
         return $translation;
     }
 
-    function eov_shortcode_area(){
+    function eov_shortcode_area() {
         global $post;
         if($post->post_type== self::$post_type){ ?>
         <div class="eov_playlist_shortcode">
@@ -142,13 +144,13 @@ class Shortcode{
         );
     }
 
-    function eov_review_callback(){
+    function eov_review_callback() {
         echo  'If you like <strong>Embed Office Viewer </strong> Plugin, please leave us a <a href="https://wordpress.org/support/plugin/embed-office-viewer/reviews/?filter=5#new-post" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733; rating.</a> Your Review is very important to us as it helps us to grow more.
 
         <p>Need some improvement ? <a href="mailto:abuhayat.du@gmail.com">Please let me know </a> how can i improve the Plugin.</p>' ;
     }
 
-    function eov_hide_publishing_actions(){
+    function eov_hide_publishing_actions() {
         global $post;
         if($post->post_type == self::$post_type){
             echo  '
@@ -160,6 +162,28 @@ class Shortcode{
                 </style>
             ' ;
         }
+    }
+
+
+    function ovp_help_pages() {
+        add_submenu_page(
+            'edit.php?post_type=officeviewer',
+            'Demo & Help',
+            'Demo & Help',
+            'manage_options',
+            'dashboard',
+            [$this, 'ovp_render_dashboard']
+        );
+    } 
+
+    function ovp_render_dashboard() {
+        ?>
+        <style>#wpcontent { padding-left: 0 !important; }</style>
+        <div id="bplAdminHelpPage"
+            data-version="<?php echo esc_attr(EOV_VERSION); ?>"
+            data-is-premium="<?php echo esc_attr(eovIsPremium()); ?>">
+        </div>
+        <?php
     }
 
 }

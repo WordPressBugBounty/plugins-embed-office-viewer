@@ -6,14 +6,14 @@ class Style{
     protected static $styles = [];
     protected static $mediaQuery = [];
 
-    public static function renderStyle(){
+    public static function renderStyle() {
         $output = '';
         foreach(self::$styles as $selector => $style){
             $new = '';
             foreach($style as $property => $value){
                 if($value == ''){
                     $new .= $property;
-                }else {
+                } else {
                     $new .= " $property: $value;";
                 }
             }
@@ -41,7 +41,7 @@ class Style{
         return $output;
     }
 
-    public static function addStyle($selector, $styles, $mediaQuery = false){
+    public static function addStyle($selector, $styles, $mediaQuery = false) {
         if($mediaQuery){
             if(array_key_exists($mediaQuery, self::$mediaQuery)){
                 if(array_key_exists($selector, self::$mediaQuery[$mediaQuery])){
@@ -49,25 +49,24 @@ class Style{
                 }else {
                     self::$mediaQuery[$mediaQuery] = wp_parse_args(self::$mediaQuery[$mediaQuery], [$selector => $styles]);
                 }
-             }else {
+             }  else {
                  self::$mediaQuery[$mediaQuery] = [$selector => $styles];
              }
         }else {
             if(array_key_exists($selector, self::$styles)){
                 self::$styles[$selector] = wp_parse_args(self::$styles[$selector], $styles);
-             }else {
+            }else {
                  self::$styles[$selector] = $styles;
              }
         }
         
     }
 
-
-    public static function createId(){
+    public static function createId() {
         self::$uniqid = "pdp".uniqid();
     }
 
-    public static function splice($string){
+    public static function splice($string) {
         if(strlen($string) < 45){
             return $string;
         }

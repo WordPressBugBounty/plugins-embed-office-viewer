@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "eov/embed-office-viewer",
+  "version": "1.0.0",
+  "title": "Document Viewer",
+  "category": "widgets",
+  "description": "You can Embed Microsoft Word, Excel And Powerpodint File in wordpress Using 'Document Viewer for Office' Plugin.",
+  "keywords": [
+    "block",
+    "document viewer",
+    "embed document",
+    "office viewer",
+    "document"
+  ],
+  "textdomain": "eov",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "officeViewer": {
+      "type": "object",
+      "default": {
+        "docSource": "library",
+        "viewer": "google",
+        "dropboxURL": "",
+        "googleDriveURL": "",
+        "officeFile": "",
+        "height": "500px",
+        "width": "100%",
+        "disablePopout": false,
+        "showFileNameOnTop": false,
+        "showDownloadBtnOnTop": false,
+        "disableRightClick": false,
+        "disableFullScreen": false
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "interactivity": true
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "react",
+    "react-dom"
+  ]
+}

@@ -19,7 +19,7 @@ if (!class_exists('Eov_Free_plugins')) {
             add_submenu_page(
                 'edit.php?post_type=officeviewer',
                 'bPlugins',
-                'Free Plugins From bPlugins LLC',
+                'Free Plugins From bPlugins',
                 'manage_options',
                 '/plugin-install.php?s=abuhayat&tab=search&type=author'
             );
