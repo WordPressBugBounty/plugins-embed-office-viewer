@@ -2,8 +2,8 @@
 Contributors: bplugins,shehabulislam, taninrahman, freemius
 Tags: Embed document, ms word, pdf, document viewer
 Requires at least: 5.6
-Tested up to: 6.8.1
-Stable tag: 2.3.0
+Tested up to: 6.8
+Stable tag: 2.3.1
 Requires PHP: 7.1
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
@@ -17,7 +17,7 @@ If you have Office documents on your website or blog that you want your readers 
 
 This WordPress plugin offers seamless integration of document viewing using two popular viewer types: Google Doc Viewer and Microsoft Online Viewer. Easily customize the layout of your documents by adjusting width and height settings to match your desired design.
 
-Unlock additional features with the pro version, including the ability to select documents directly from Google Drive, or Dropbox. View documents using the Google Doc Viewer for enhanced compatibility and functionality. 
+Unlock additional features with the pro version, including the ability to select documents directly from Google Drive, OneDrive, or Dropbox. View documents using the Google Doc Viewer for enhanced compatibility and functionality. 
 
 Control user experience by enabling or disabling pop-out options, displaying or hiding the file name at the top, and toggling the download button for easy access.
 
@@ -42,6 +42,7 @@ Enhance document security by enabling or disabling right-click functionality as 
 ### Document Viewer Pro Features
 
 - Choose Document From Google Drive
+- Choose Document From OneDrive
 - Choose Document From Dropbox
 - View Document by Google Doc Viewer
 - Disable/Enable Pop-out
@@ -126,6 +127,9 @@ Thanks for your interest. You can donate any amount by visiting  [Here](https://
 
 
 == Changelog ==
+
+= 2.3.1 - 12 July, 2025 =
+* Fixed issues
 
 = 2.3.0 - 10 May, 2025 =
 * Fixed textdomain issue & add powerfull Gutenberg block

@@ -33,7 +33,9 @@
         "showFileNameOnTop": false,
         "showDownloadBtnOnTop": false,
         "disableRightClick": false,
-        "disableFullScreen": false
+        "disableFullScreen": false,
+        "isRemoveDownloadBtn": false,
+        "isRemoveFullScreen": false
       }
     }
   },

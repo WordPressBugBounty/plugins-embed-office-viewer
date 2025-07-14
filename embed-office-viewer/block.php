@@ -15,7 +15,7 @@ if (!class_exists('EOVPlugin')) {
 
     function eovPipeChecker() {
         $nonce = $_POST['_wpnonce'] ?? null;
-
+        
         if (!wp_verify_nonce($nonce, 'wp_ajax')) {
             wp_send_json_error('Invalid Request');
         }

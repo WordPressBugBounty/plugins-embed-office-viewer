@@ -4,30 +4,36 @@
   padding-bottom: 11px !important;
   margin-left: 30px;
 }
+
 .eov_onedrive_btn {
   padding: 3px 15px !important;
   font-size: 15px !important;
   padding-bottom: 5px !important;
 }
+
 .eov_onedrive_btn img {
   margin-right: 5px;
   vertical-align: bottom;
 }
+
 .eov_ondrive_doc input,
 #dropbox_cloud_file_url,
 #eov_google_document_url {
   margin-right: 10px;
 }
+
 #eov_onedrive_optoin_client_id,
 #eov_ondeive_file_url {
   margin-right: 30px;
 }
-#dropbox_connect {
-}
+
+#dropbox_connect {}
+
 #google_empty_alert {
   display: none;
   transition: 0.5s;
 }
+
 .alert_text {
   width: 450px;
   height: 150px;
@@ -41,27 +47,33 @@
   transform: translate(-50%, -100%);
   border-radius: 5px;
 }
+
 .alert_text .g_footer {
   border-top: 1px solid #ddd;
   text-align: right;
 }
+
 .alert_text a.g_ok {
   margin-top: 11px;
   margin-right: 14px;
 }
+
 .alert_text span {
   position: absolute;
   right: 13px;
   top: 2px;
   font-size: 20px;
 }
+
 .alert_text span:hover {
   cursor: pointer;
 }
+
 .alert_text p {
   padding: 23px;
   font-size: 14px;
 }
+
 .google_alert_overlay {
   width: 100%;
   height: 100%;
@@ -74,56 +86,71 @@
   z-index: 99;
   opacity: 0.9;
 }
+
 .document_source_btn .csf--button {
   margin-right: 25px;
   padding: 7px 15px !important;
   border-radius: 3px !important;
 }
+
 .dropbox-dropin-btn {
   padding: 7px 7px !important;
 }
+
 h3.doc_source_premium {
   width: 100%;
   float: left;
 }
+
 .center,
 .container {
   margin-left: auto;
   margin-right: auto;
 }
+
 .font-light {
   font-weight: 300;
 }
+
 .font-regular {
   font-weight: 400;
 }
+
 .font-heavy {
   font-weight: 700;
 }
+
 .left {
   text-align: left;
 }
+
 .right {
   text-align: right;
 }
+
 .center {
   text-align: center;
 }
+
 .justify {
   text-align: justify;
 }
+
 .container {
   width: 90%;
 }
+
 .row {
   position: relative;
   width: 100%;
 }
+
 .row [class^="col"] {
   float: left;
   margin: 0.5rem 1%;
   min-height: 0.125rem;
 }
+
 .col-1,
 .col-10,
 .col-11,
@@ -138,96 +165,125 @@ h3.doc_source_premium {
 .col-9 {
   width: 96%;
 }
+
 .col-1-sm {
   width: 4.33%;
 }
+
 .col-2-sm {
   width: 12.66%;
 }
+
 .col-3-sm {
   width: 21%;
 }
+
 .col-4-sm {
   width: 29.33%;
 }
+
 .col-5-sm {
   width: 37.66%;
 }
+
 .col-6-sm {
   width: 46%;
 }
+
 .col-7-sm {
   width: 54.33%;
 }
+
 .col-8-sm {
   width: 62.66%;
 }
+
 .col-9-sm {
   width: 71%;
 }
+
 .col-10-sm {
   width: 79.33%;
 }
+
 .col-11-sm {
   width: 87.66%;
 }
+
 .col-12-sm {
   width: 96%;
 }
+
 .row::after {
   content: "";
   display: table;
   clear: both;
 }
+
 .hidden-sm {
   display: none;
 }
+
 @media only screen and (min-width: 33.75em) {
   .container {
     width: 80%;
   }
 }
+
 @media only screen and (min-width: 45em) {
   .col-1 {
     width: 4.33%;
   }
+
   .col-2 {
     width: 12.66%;
   }
+
   .col-3 {
     width: 21%;
   }
+
   .col-4 {
     width: 29.33%;
   }
+
   .col-5 {
     width: 37.66%;
   }
+
   .col-6 {
     width: 46%;
   }
+
   .col-7 {
     width: 54.33%;
   }
+
   .col-8 {
     width: 62.66%;
   }
+
   .col-9 {
     width: 67%;
   }
+
   .col-10 {
     width: 75.33%;
   }
+
   .col-11 {
     width: 83.66%;
   }
+
   .col-12 {
     width: 92%;
   }
+
   .hidden-sm {
     display: block;
   }
 }
+
 @media only screen and (min-width: 60em) {
   .container {
     width: 75%;
@@ -239,9 +295,11 @@ h3.doc_source_premium {
   background: #ffffff;
   padding: 20px;
 }
+
 .eov_wrap .contact h5 {
   font-size: 16px;
 }
+
 .eov_wrap h2 {
   font-size: 40px;
 }
@@ -251,31 +309,39 @@ h3.doc_source_premium {
   min-width: 1140px;
   margin: 0 auto;
 }
+
 .bplugins-feature {
   background: #ffffff;
   padding: 20px;
 }
+
 .bplugins-feature i {
   font-size: 30px;
   color: #4527a4;
 }
+
 .bplugins-feature h3 {
   margin-bottom: 10px;
   font-size: 17px;
 }
+
 .bplugins-feature p {
   margin-top: 0;
   font-weight: 400;
 }
+
 .bplugins-features .col:first-child {
   margin-left: 0;
 }
+
 .bplugins-features .col:last-child {
   margin-right: 0;
 }
+
 .row [class^="col"] {
   margin: 0.5rem 1%;
 }
+
 #TB_overlay {
   background: #000;
   opacity: 0.7;
@@ -316,32 +382,38 @@ h3.doc_source_premium {
   font-weight: bold;
   line-height: 0;
 }
+
 .eov_playlist_shortcode {
   margin-top: 30px;
   border: 5px solid #4527a4;
   overflow: hidden;
 }
+
 .eov_playlist_shortcode .shortcode-heading {
   background: #4527a4;
   padding: 15px;
   overflow: hidden;
   color: #ffffff;
 }
+
 .eov_playlist_shortcode .shortcode-heading .icon {
   float: left;
   overflow: hidden;
   width: 50%;
 }
+
 .eov_playlist_shortcode .shortcode-heading .text {
   float: right;
   overflow: hidden;
   text-align: right;
 }
+
 .eov_playlist_shortcode .shortcode-heading .text a {
   color: #ffffff;
   display: block;
   text-decoration: none;
 }
+
 .eov_playlist_shortcode .shortcode-left {
   width: 50%;
   float: left;
@@ -352,6 +424,7 @@ h3.doc_source_premium {
   border-right: 5px solid #4527a4;
   box-sizing: border-box;
 }
+
 .eov_playlist_shortcode .shortcode-right {
   width: 50%;
   float: left;
@@ -360,6 +433,7 @@ h3.doc_source_premium {
   text-align: center;
   background: #ffffff;
 }
+
 .eov_playlist_shortcode .shortcode {
   padding: 8px 15px;
   background: #eae6f9;
@@ -367,13 +441,16 @@ h3.doc_source_premium {
   user-select: all;
   font-size: 16px;
 }
+
 /* shortcode copy to clipboard */
 #eov_copied {
   margin-left: 15px;
 }
+
 .eov_front_shortcode input {
   cursor: pointer;
 }
+
 .eov_front_shortcode {
   position: relative;
   display: inline-block;
@@ -410,4 +487,8 @@ h3.doc_source_premium {
 .eov_front_shortcode:hover .htooltip {
   visibility: visible;
   opacity: 1;
+}
+
+.eov_document_ext_field {
+  display: none !important;
 }

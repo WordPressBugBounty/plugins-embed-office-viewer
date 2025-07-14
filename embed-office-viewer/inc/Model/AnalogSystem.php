@@ -20,6 +20,8 @@ class AnalogSystem{
             'showName' => Functions::meta( $id, 'eov_show_name', false ),
             'downloadBtn' => Functions::meta( $id, 'eov_download_button', false ),
             'rightClick' => Functions::meta( $id, 'eov_right_click', false ),
+            'isRemoveDownloadBtn' => Functions::meta( $id, 'isRemoveDownloadBtn', false ),
+            'isRemoveFullScreen' => Functions::meta( $id, 'isRemoveFullScreen', false ),
             'disablePopout' => Functions::meta( $id, 'eov_disbale_popout', false ),
             'disableFullscreen' => Functions::meta( $id, 'eov_disable_fullscreen', false ),
             'docFile' => Functions::meta( $id, 'eov_document', true ),

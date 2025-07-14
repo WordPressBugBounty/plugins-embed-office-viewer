@@ -19,6 +19,8 @@
                         this.prop("disabled", true);
                     });
             }
+
+
         } else {
             //alert("working");
             $("[value='dropbox']").parent().attr("style", "opacity:0.4;cursor:not-allowed");
@@ -86,5 +88,37 @@
         $(".alert_text .g_ok").on("click", function () {
             $("#google_empty_alert").hide();
         });
+
+
+        const $docInput = $('.eov_document input');
+        const $extInput = $('.eov_document_ext_field input');
+        const $downloadBtn = $(".eov_disable_download_btn");
+
+        function updateExtensionField() {
+            const docValue = $docInput.val();
+            if (!docValue) return;
+
+            const ext = docValue.split('.').pop().toLowerCase();
+            $extInput.val(ext).trigger('change');
+
+            // Show/hide logic based on extension
+            if (ext === "pptx") {
+                $downloadBtn.show();
+            } else {
+                $downloadBtn.hide();
+            }
+        }
+
+        // Trigger on load if value exists
+        if ($docInput.val()) {
+            updateExtensionField();
+        }
+
+        // Trigger on change/input
+        $docInput.on('change input', updateExtensionField);
+
     });
+
+
+
 })(jQuery);
