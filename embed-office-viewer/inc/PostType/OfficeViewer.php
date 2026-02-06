@@ -52,7 +52,7 @@ class Shortcode{
             'exclude_from_search' => true,
             'menu_position'       => 14,
             'show_in_rest'        => true,
-            'menu_icon'           => EOV_PLUGIN_DIR . '/img/icon.png',
+            'menu_icon'           => EOV_PLUGIN_DIR . '/assets/images/icon.png',
             'has_archive'         => false,
             'hierarchical'        => false,
             'capability_type'     => 'post',
@@ -171,18 +171,21 @@ class Shortcode{
             'Demo & Help',
             'Demo & Help',
             'manage_options',
-            'dashboard',
+            'eov-dashboard',
             [$this, 'ovp_render_dashboard']
         );
     } 
 
-    function ovp_render_dashboard() {
+    public function ovp_render_dashboard() {
         ?>
-        <style>#wpcontent { padding-left: 0 !important; }</style>
-        <div id="bplAdminHelpPage"
-            data-version="<?php echo esc_attr(EOV_VERSION); ?>"
-            data-is-premium="<?php echo esc_attr(eovIsPremium()); ?>">
-        </div>
+       <style>#wpcontent { padding-left: 0 !important; }</style>
+       <div id='eovAdminDashboard'
+            data-info='<?php echo esc_attr( wp_json_encode( [
+                'version' => EOV_VERSION,
+                'isPremium' => eov_fs()->can_use_premium_code(),
+                'adminUrl' => admin_url()
+            ] ) ); ?>'
+        ></div>
         <?php
     }
 

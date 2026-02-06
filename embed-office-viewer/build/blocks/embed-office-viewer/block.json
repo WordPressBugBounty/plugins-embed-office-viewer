@@ -2,16 +2,19 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "eov/embed-office-viewer",
-  "version": "1.0.0",
+  "version": "2.3.3",
   "title": "Document Viewer",
   "category": "widgets",
   "description": "You can Embed Microsoft Word, Excel And Powerpodint File in wordpress Using 'Document Viewer for Office' Plugin.",
   "keywords": [
+    "embed document block",
     "block",
-    "document viewer",
-    "embed document",
-    "office viewer",
-    "document"
+    "pdf viewer",
+    "display document",
+    "document",
+    "office file",
+    "any document viewer",
+    "Show document"
   ],
   "textdomain": "eov",
   "attributes": {

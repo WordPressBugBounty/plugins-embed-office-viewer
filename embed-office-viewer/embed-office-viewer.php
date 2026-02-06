@@ -4,7 +4,7 @@
  * Plugin Name: Document Viewer for Office
  * Plugin URI:  http://bplugins.com
  * Description: You can Embed Microsoft Word, Excel And Powerpodint File in wordpress Using 'Document Viewer for Office' Plugin.
- * Version: 2.3.1
+ * Version: 2.3.3
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
@@ -17,14 +17,14 @@ if ( function_exists( 'eov_fs' ) ) {
     // Some Set-up
     define( 'EOV_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
     define( 'EOV_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-    define( 'EOV_VERSION', '2.3.1' );
+    define( 'EOV_VERSION', '2.3.3' );
     if ( !function_exists( 'eov_fs' ) ) {
         // Create a helper function for easy SDK access.
         function eov_fs() {
             global $eov_fs;
             if ( !isset( $eov_fs ) ) {
                 // Include Freemius SDK.
-                require_once dirname( __FILE__ ) . '/freemius/start.php';
+                require_once dirname( __FILE__ ) . '/vendor/freemius/start.php';
                 $eov_fs = fs_dynamic_init( array(
                     'id'             => '7003',
                     'slug'           => 'embed-office-viewer',
@@ -40,7 +40,7 @@ if ( function_exists( 'eov_fs' ) ) {
                     ),
                     'menu'           => array(
                         'slug'       => 'edit.php?post_type=officeviewer',
-                        'first-path' => 'edit.php?post_type=officeviewer&page=dashboard#/dashboard',
+                        'first-path' => 'edit.php?post_type=officeviewer&page=eov-dashboard#/welcome',
                     ),
                     'is_live'        => true,
                 ) );
@@ -63,9 +63,4 @@ if ( function_exists( 'eov_fs' ) ) {
     require_once EOV_PLUGIN_PATH . 'inc/class-eov.php';
     // Initialize
     EOV::instance();
-    // Activation Redirect For Free Version
-    if ( 'embed-office-viewer/embed-office-viewer.php' === plugin_basename( __FILE__ ) ) {
-        register_activation_hook( __FILE__, ['EOV', 'activation_redirect'] );
-        add_action( 'admin_init', ['EOV', 'do_redirect_to_dashboard'] );
-    }
 }

@@ -21,15 +21,15 @@ class EOV {
 
     public function init() {
         if (!class_exists('CSF')) {
-            require_once EOV_PLUGIN_PATH . 'admin/codestar-framework/codestar-framework.php';
+            require_once EOV_PLUGIN_PATH . 'frameworks/codestar-framework/codestar-framework.php';
         }
 
         if (function_exists('eov_fs') && eov_fs()->can_use_premium_code__premium_only() && file_exists(EOV_PLUGIN_PATH . 'premium-files/metabox-pro.php')) {
             require_once EOV_PLUGIN_PATH . 'premium-files/metabox-pro.php';
         }
 
-        if (function_exists('eov_fs') && eov_fs()->is_free_plan() && file_exists(EOV_PLUGIN_PATH . 'admin/codestar-framework/metabox-free.php')) {
-            require_once EOV_PLUGIN_PATH . 'admin/codestar-framework/metabox-free.php';
+        if (function_exists('eov_fs') && eov_fs()->is_free_plan() && file_exists(EOV_PLUGIN_PATH . 'frameworks/codestar-framework/metabox-free.php')) {
+            require_once EOV_PLUGIN_PATH . 'frameworks/codestar-framework/metabox-free.php';
         }
     }
 
@@ -43,17 +43,14 @@ class EOV {
         require_once EOV_PLUGIN_PATH . 'inc/Services/Shortcode.php';
 
         if (function_exists('eov_fs') && eov_fs()->is_free_plan()) {
-            require_once EOV_PLUGIN_PATH . 'admin/global/free-plugin-list.php';
-            // require_once EOV_PLUGIN_PATH . 'admin/global/premium-plugins.php'; // Old Stuff
-            // require_once EOV_PLUGIN_PATH . 'inc/Model/EnqueueAssets.php'; // Old Stuff
+            require_once EOV_PLUGIN_PATH . 'inc/free-plugin-list.php';
             require_once EOV_PLUGIN_PATH . 'inc/Services/Template.php';
         }
 
         if (function_exists('eov_fs') && eov_fs()->can_use_premium_code__premium_only()) {
             require_once EOV_PLUGIN_PATH . 'premium-files/shortcode-pro.php';
-            // require_once EOV_PLUGIN_PATH . 'premium-files/EnqueueAssets.php'; // Old Stuff
             require_once EOV_PLUGIN_PATH . 'premium-files/GlobalChangesPro.php';
-            require_once EOV_PLUGIN_PATH . 'admin/import-meta.php';
+            require_once EOV_PLUGIN_PATH . 'inc/import-meta.php';
             require_once EOV_PLUGIN_PATH . 'premium-files/Template.php';
         }
 
@@ -71,7 +68,7 @@ class EOV {
 
             echo '<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="' . esc_attr( $dropbox_app_key['eov_dropbox_appkey'] ?? "" ) . '"></script>';
 
-            wp_enqueue_style( 'eov-admin-css', EOV_PLUGIN_DIR . 'admin/css/style.css' );
+            wp_enqueue_style( 'eov-admin-css', EOV_PLUGIN_DIR . 'assets/css/style.css' );
 
             if (function_exists('eov_fs') && eov_fs()->is_free_plan() && file_exists(EOV_PLUGIN_PATH . 'assets/js/script-free.js')) {
                 wp_enqueue_script( 'eov-admin-js', EOV_PLUGIN_DIR . 'assets/js/script-free.js', array( 'jquery' ), "" );
@@ -114,10 +111,9 @@ class EOV {
         }
 
         // Dashboard Script and Style
-        if ($hook === "officeviewer_page_dashboard") {
-            wp_enqueue_script('ovp-dashboard-js', EOV_PLUGIN_DIR . 'build/admin-help.js', ['react', 'react-dom'], EOV_VERSION, true);
-            wp_enqueue_script('ovp-fs-js', EOV_PLUGIN_DIR . 'assets/js/fs.js', [], EOV_VERSION, true);
-            wp_enqueue_style('ovp-dashboard-css', EOV_PLUGIN_DIR . 'build/admin-help.css', [], EOV_VERSION);
+        if ($hook === "officeviewer_page_eov-dashboard") { 
+            wp_enqueue_script('ovp-dashboard-js', EOV_PLUGIN_DIR . 'build/admin-dashboard.js', ['react', 'react-dom'], EOV_VERSION, true);
+            wp_enqueue_style('ovp-dashboard-css', EOV_PLUGIN_DIR . 'build/admin-dashboard.css', [], EOV_VERSION);
         }
 
     }

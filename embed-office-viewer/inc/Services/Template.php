@@ -1,7 +1,7 @@
 <?php
 namespace EOV\Services;
 
-class Template{
+class Template {
 
     protected static $style = [];
     protected static $uniqid = null;
@@ -36,28 +36,26 @@ class Template{
         }
     }
     
-    public static function googleViewer($data){
+    public static function googleViewer($data) {
         ?>
         <iframe id="s_pdf_frame" src="//docs.google.com/gview?embedded=true&url=<?php echo esc_url($data['docFile']); ?>" style="margin:0 auto; padding:10px;<?php echo 'width:' . esc_attr($data['width']) . ';height:' . esc_attr($data['height']) ?>" frameborder="0"></iframe>
         <?php
     }
 
-    public static function microsoftViewer($data){
+    public static function microsoftViewer($data) {
         ?>
         <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<?php echo esc_url($data['docFile']) ;?>" width="<?php echo esc_attr($data['width']) ;?>" height="<?php echo esc_attr($data['height']) ;?>" frameborder="0"></iframe>
         <?php
     }
 
-    /**
-     * create a unique id
-     */
-    public static function createId(){
+    //  create a unique id
+    public static function createId() {
         if(self::$uniqid === null){
             self::$uniqid = "eov".uniqid();
         }
     }
 
-    public static function style($data){
+    public static function style($data) {
         self::addStyle("#".self::$uniqid, ['position' => 'relative', 'width' => $data['width'], 'height' => $data['height'], 'margin' => '0 auto']);
 
         $stylesheet = '';
@@ -71,7 +69,7 @@ class Template{
         return $stylesheet;
     }
 
-    public static function addStyle($selector, $style){
+    public static function addStyle($selector, $style) {
         if(isset(self::$style[$selector])){
             array_push(self::$style[$selector], $style);
         }else {
