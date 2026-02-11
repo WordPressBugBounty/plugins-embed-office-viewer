@@ -16,6 +16,10 @@ Embed Word, Excel, PowerPoint, PDF, and more — directly inside your WordPress 
 
 **The Most Reliable Document Viewer for WordPress – Trusted by Thousands of Users**
 
+[**Document Viewer**](https://bplugins.com/products/document-viewer/) | [**Live Demo**](https://bplugins.com/products/document-viewer/#demos) | [**Buy Pro**](https://bplugins.com/products/document-viewer/pricing) | [**Support**](https://bplugins.com/support/)
+
+https://www.youtube.com/watch?v=ADIYjLRK3Ds
+
 Document Viewer lets you embed Microsoft Office files and PDFs right inside posts, pages, and custom templates — with no need for additional software or plugins.
 
 Whether you want to display a syllabus, project file, brochure, spreadsheet, presentation, or any document on your WordPress site, this plugin provides a smooth, responsive, and user-friendly viewing experience.
@@ -25,8 +29,6 @@ The plugin supports **Google Doc Viewer** and **Microsoft Online Viewer**, allow
 The Pro version unlocks cloud integrations (Google Drive, OneDrive, Dropbox), extra viewing controls, and enhanced security options like disabling right-click.
 
 **Perfect for:** educators, corporate sites, portfolios, publishers, agencies, product manuals, documentation systems, and more.
-
-[**Document Viewer**](https://bplugins.com/products/document-viewer/) | [**Live Demo**](https://bplugins.com/products/document-viewer/#demos) | [**Buy Pro**](https://bplugins.com/products/document-viewer/pricing) | [**Support**](https://bplugins.com/support/)
 
 
 == Key Features (Free)  ==
