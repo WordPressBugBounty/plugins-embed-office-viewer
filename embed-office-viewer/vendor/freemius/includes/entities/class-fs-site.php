@@ -120,7 +120,7 @@
             parent::__construct( $site );
 
             if ( is_object( $site ) ) {
-                $this->plan_id = $site->plan_id ?? null;
+                $this->plan_id = $site->plan_id;
             }
 
             if ( ! is_bool( $this->is_disconnected ) ) {
@@ -202,7 +202,7 @@
                 // Vendasta
                 ( fs_ends_with( $subdomain, '.websitepro-staging.com' ) || fs_ends_with( $subdomain, '.websitepro.hosting' ) ) ||
                 // InstaWP
-                fs_ends_with( $subdomain, '.instawp.xyz' ) ||
+                ( fs_ends_with( $subdomain, '.instawp.co' ) || fs_ends_with( $subdomain, '.instawp.link' ) || fs_ends_with( $subdomain, '.instawp.xyz' ) ) ||
                 // 10Web Hosting
                 ( fs_ends_with( $subdomain, '-dev.10web.site' ) || fs_ends_with( $subdomain, '-dev.10web.cloud' ) )
             );
@@ -220,6 +220,8 @@
             // Services aimed at providing a WordPress sandbox environment.
             $sandbox_wp_environment_domains = array(
                 // InstaWP
+                'instawp.co',
+                'instawp.link',
                 'instawp.xyz',
 
                 // TasteWP

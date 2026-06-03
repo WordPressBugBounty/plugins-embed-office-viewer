@@ -1,31 +1,39 @@
 <?php
-
 /*
  * Plugin Name: Document Viewer for Office
  * Plugin URI:  http://bplugins.com
  * Description: You can Embed Microsoft Word, Excel And Powerpodint File in wordpress Using 'Document Viewer for Office' Plugin.
- * Version: 2.3.3
+ * Version: 2.4.0
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
- * Text Domain:  eov
+ * Text Domain:  embed-office-viewer
  * Domain Path:  /languages
+ * @fs_premium_only  /includes/admin/class-bpleov-license-activation.php, /includes/admin/class-bpleov-metabox-pro.php, /includes/public/class-bpleov-shortcode-pro.php, /includes/public/class-bpleov-template-pro.php, /includes/Model/class-bpleov-global-changes-pro.php, /assets/pdfjs-new/
  */
-if ( function_exists( 'eov_fs' ) ) {
-    eov_fs()->set_basename( false, __FILE__ );
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+if ( function_exists( 'bpleov_fs' ) ) {
+    bpleov_fs()->set_basename( true, __FILE__ );
 } else {
-    // Some Set-up
-    define( 'EOV_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
-    define( 'EOV_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-    define( 'EOV_VERSION', '2.3.3' );
-    if ( !function_exists( 'eov_fs' ) ) {
+    // Setup Constants
+    define( 'BPLEOV_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
+    define( 'BPLEOV_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+    define( 'BPLEOV_VERSION', '2.4.0' );
+    define( 'BPLEOV_HAS_PRO', 'embed-office-viewer-premium/embed-office-viewer.php' === plugin_basename( __FILE__ ) );
+
+    if ( ! function_exists( 'bpleov_fs' ) ) {
         // Create a helper function for easy SDK access.
-        function eov_fs() {
-            global $eov_fs;
-            if ( !isset( $eov_fs ) ) {
+        function bpleov_fs() {
+            global $bpleov_fs;
+            
+            if ( ! isset( $bpleov_fs ) ) {
                 // Include Freemius SDK.
                 require_once dirname( __FILE__ ) . '/vendor/freemius/start.php';
-                $eov_fs = fs_dynamic_init( array(
+                $bpleov_fs = fs_dynamic_init( array(
                     'id'             => '7003',
                     'slug'           => 'embed-office-viewer',
                     'type'           => 'plugin',
@@ -33,34 +41,32 @@ if ( function_exists( 'eov_fs' ) ) {
                     'is_premium'     => false,
                     'premium_suffix' => 'Pro',
                     'has_addons'     => false,
-                    'has_paid_plans' => true,
-                    'trial'          => array(
-                        'days'               => 7,
-                        'is_require_payment' => true,
-                    ),
                     'menu'           => array(
                         'slug'       => 'edit.php?post_type=officeviewer',
                         'first-path' => 'edit.php?post_type=officeviewer&page=eov-dashboard#/welcome',
+                        'support'    => false,
                     ),
                     'is_live'        => true,
                 ) );
             }
-            return $eov_fs;
+            
+            return $bpleov_fs;
         }
-
+        
         // Init Freemius.
-        eov_fs();
+        bpleov_fs();
         // Signal that SDK was initiated.
-        do_action( 'eov_fs_loaded' );
+        do_action( 'bpleov_fs_loaded' );
+    } 
+    
+    // Load Composer Autoloader
+    if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+        require_once dirname( __FILE__ ) . '/vendor/autoload.php';
     }
-    if ( !function_exists( 'eovIsPremium' ) ) {
-        function eovIsPremium() {
-            return eov_fs()->can_use_premium_code();
-        }
 
-    }
     // Load Main Plugin Class
-    require_once EOV_PLUGIN_PATH . 'inc/class-eov.php';
+    require_once BPLEOV_PLUGIN_PATH . 'includes/class-bpleov.php';
     // Initialize
-    EOV::instance();
+    BPLEOV\BPLEOV_Main::instance();
+
 }

@@ -34,5 +34,18 @@
         $(".eov_front_shortcode input").on("mouseout", function () {
             $(this).parent().find(".htooltip").text("Copy To Clipboard");
         });
+
+        var $li = $('input[value="js"]').closest('li');
+
+        // Disable radio
+        $li.find('input').prop('disabled', true);
+        $li.addClass('eov-lock-field');
+        // Add PRO badge
+        var $text = $li.find('.csf--text');
+
+        if (!$text.find('.eov-pro-badge').length) {
+            $text.append(' <span class="eov-pro-badge">PRO</span>');
+        }
+
     });
 })(jQuery);

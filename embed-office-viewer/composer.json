@@ -1,0 +1,11 @@
+{
+    "name": "bplugins/embed-office-viewer",
+    "description": "Embed and Display Office and PDF Files",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "classmap": [
+            "includes/"
+        ]
+    }
+}
