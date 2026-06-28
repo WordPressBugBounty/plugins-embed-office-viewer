@@ -164,7 +164,9 @@ class BPLEOV_OfficeViewer {
        <style>#wpcontent { padding-left: 0 !important; }</style>
        <div id='bpleovAdminDashboard'
             data-info='<?php echo esc_attr( wp_json_encode( [
-                'version' => BPLEOV_VERSION
+                'version'  => BPLEOV_VERSION,
+                'adminUrl' => admin_url(),
+                'nonce'    => wp_create_nonce( 'bpleovCreatePage' )
             ] ) ); ?>'
         ></div>
         <?php

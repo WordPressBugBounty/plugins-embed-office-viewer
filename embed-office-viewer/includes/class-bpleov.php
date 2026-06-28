@@ -38,6 +38,9 @@ class BPLEOV_Main {
         \BPLEOV\Core\BPLEOV_OfficeViewer::instance();
         \BPLEOV\Admin\BPLEOV_Admin::instance();
         \BPLEOV\Services\BPLEOV_ShortcodeFree::instance();
+
+        // In-admin help chatbot (self-instantiates and registers at file end).
+        require_once BPLEOV_PLUGIN_PATH . 'includes/admin/class-bpleov-chatbot.php';
     }
 
     public static function load_textdomain() {

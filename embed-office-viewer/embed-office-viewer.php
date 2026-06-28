@@ -1,9 +1,9 @@
 <?php
 /*
- * Plugin Name: Document Viewer for Office
+ * Plugin Name: Document Viewer - Embed and Display Office and PDF Files
  * Plugin URI:  http://bplugins.com
  * Description: You can Embed Microsoft Word, Excel And Powerpodint File in wordpress Using 'Document Viewer for Office' Plugin.
- * Version: 2.4.0
+ * Version: 2.4.1
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
@@ -22,7 +22,7 @@ if ( function_exists( 'bpleov_fs' ) ) {
     // Setup Constants
     define( 'BPLEOV_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
     define( 'BPLEOV_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-    define( 'BPLEOV_VERSION', '2.4.0' );
+    define( 'BPLEOV_VERSION', '2.4.1' );
     define( 'BPLEOV_HAS_PRO', 'embed-office-viewer-premium/embed-office-viewer.php' === plugin_basename( __FILE__ ) );
 
     if ( ! function_exists( 'bpleov_fs' ) ) {
@@ -33,21 +33,21 @@ if ( function_exists( 'bpleov_fs' ) ) {
             if ( ! isset( $bpleov_fs ) ) {
                 // Include Freemius SDK.
                 require_once dirname( __FILE__ ) . '/vendor/freemius/start.php';
-                $bpleov_fs = fs_dynamic_init( array(
-                    'id'             => '7003',
-                    'slug'           => 'embed-office-viewer',
-                    'type'           => 'plugin',
-                    'public_key'     => 'pk_0657e65491580bc23260341c9d8e0',
-                    'is_premium'     => false,
+                $bpleov_fs = fs_dynamic_init(array(
+                    'id' => '7003',
+                    'slug' => 'embed-office-viewer',
+                    'type' => 'plugin',
+                    'public_key' => 'pk_0657e65491580bc23260341c9d8e0',
+                    'is_premium' => false,
                     'premium_suffix' => 'Pro',
-                    'has_addons'     => false,
-                    'menu'           => array(
-                        'slug'       => 'edit.php?post_type=officeviewer',
+                    'has_addons' => false,
+                    'menu' => array(
+                        'slug' => 'edit.php?post_type=officeviewer',
                         'first-path' => 'edit.php?post_type=officeviewer&page=eov-dashboard#/welcome',
-                        'support'    => false,
+                        'support' => false,
                     ),
-                    'is_live'        => true,
-                ) );
+                    'is_live' => true,
+                ));
             }
             
             return $bpleov_fs;
