@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'BPLEOVPlugin' => $baseDir . '/includes/core/class-bpleov-blocks.php',
     'BPLEOV\\Admin\\BPLEOV_Admin' => $baseDir . '/includes/admin/class-bpleov-admin.php',
+    'BPLEOV\\Admin\\BPLEOV_Chatbot' => $baseDir . '/includes/admin/class-bpleov-chatbot.php',
     'BPLEOV\\BPLEOV_Main' => $baseDir . '/includes/class-bpleov.php',
     'BPLEOV\\BPLEOV_MetaboxFree' => $baseDir . '/includes/admin/class-bpleov-metabox-free.php',
     'BPLEOV\\Core\\BPLEOV_OfficeViewer' => $baseDir . '/includes/core/class-bpleov-office-viewer.php',

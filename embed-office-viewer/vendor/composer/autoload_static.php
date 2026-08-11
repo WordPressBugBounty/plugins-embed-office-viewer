@@ -9,6 +9,7 @@ class ComposerStaticInit3454cafdbe9cd8a657da71eec2f30343
     public static $classMap = array (
         'BPLEOVPlugin' => __DIR__ . '/../..' . '/includes/core/class-bpleov-blocks.php',
         'BPLEOV\\Admin\\BPLEOV_Admin' => __DIR__ . '/../..' . '/includes/admin/class-bpleov-admin.php',
+        'BPLEOV\\Admin\\BPLEOV_Chatbot' => __DIR__ . '/../..' . '/includes/admin/class-bpleov-chatbot.php',
         'BPLEOV\\BPLEOV_Main' => __DIR__ . '/../..' . '/includes/class-bpleov.php',
         'BPLEOV\\BPLEOV_MetaboxFree' => __DIR__ . '/../..' . '/includes/admin/class-bpleov-metabox-free.php',
         'BPLEOV\\Core\\BPLEOV_OfficeViewer' => __DIR__ . '/../..' . '/includes/core/class-bpleov-office-viewer.php',

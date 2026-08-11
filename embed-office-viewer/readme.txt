@@ -1,9 +1,9 @@
 === Document Viewer - Embed and Display Office and PDF Files ===
 Contributors: bplugins,shehabulislam, taninrahman, freemius
 Tags: Embed document, easy document embedder, pdf embedder, document viewer
-Requires at least: 6.2
+Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 2.4.1
+Stable tag: 2.4.2
 Requires PHP: 7.4
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
@@ -131,6 +131,9 @@ Please report security bugs found in the source code of the Document Viewer for 
 
 
 == Changelog ==
+
+= 2.4.2 - 11 August, 2026 =
+* Security: Updated Freemius SDK dependency to the latest version to patch identified vulnerabilities and ensure robust plugin security.
 
 = 2.4.1 - 27 June 2026 =
 * Update: Redesigned and integrated the new standardized help & demos admin dashboard.
