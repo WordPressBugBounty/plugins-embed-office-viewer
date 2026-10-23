@@ -1,236 +1,306 @@
-=== Document Viewer - Embed and Display Office and PDF Files ===
-Contributors: bplugins,shehabulislam, taninrahman, freemius
-Tags: Embed document, easy document embedder, pdf embedder, document viewer
+=== Document Viewer - let visitors view files right in the browser ===
+Contributors: bplugins, taninrahman, freemius
+Tags: embed document, document viewer, office viewer, embed word, embed powerpoint
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1.1
 Stable tag: 2.4.2
 Requires PHP: 7.4
 Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-With the Document Viewer for Office plugin, you can view Microsoft Word, Excel, PowerPoint, and more files in WordPress using shortcode
+Embed Word, Excel, PowerPoint and PDF files in WordPress using Microsoft Office Viewer or Google Docs Viewer. One shortcode, no file conversion.
 
 == Description ==
 
-If you have Office documents on your website or blog that you want your readers to view even if they don’t have Office installed? Would you rather view a document before downloading it? To give your audience a better experience, try the Office Web Viewer.
+**Office files rendered by Microsoft, not by a converter.**
 
-This WordPress plugin offers seamless integration of document viewing using two popular viewer types: Google Doc Viewer and Microsoft Online Viewer. Easily customize the layout of your documents by adjusting width and height settings to match your desired design.
+Most embed plugins push your Word and Excel files through a third-party converter, and complex layouts come out broken — tables collapse, fonts change, slide animations disappear. Document Viewer uses **Microsoft's own Office Web Viewer**, the same engine behind Office Online, so a .docx looks like a .docx and an .xlsx keeps its columns.
 
-Unlock additional features with the pro version, including the ability to select documents directly from Google Drive, OneDrive, or Dropbox. View documents using the Google Doc Viewer for enhanced compatibility and functionality. 
+Your visitors read the file on the page. No download, no Office installation, no conversion step for you.
 
-Control user experience by enabling or disabling pop-out options, displaying or hiding the file name at the top, and toggling the download button for easy access.
+[**Live Demo**](https://bplugins.com/products/document-viewer/#demos) | [**Pricing**](https://bplugins.com/products/document-viewer/pricing) | [**Support**](https://bplugins.com/support/)
 
-Enhance document security by enabling or disabling right-click functionality as needed. With these advanced features, managing and presenting documents on your WordPress site becomes more efficient and user-friendly.
+### Two viewer engines, both free
 
+*   **Microsoft Office Web Viewer** — the best choice for Word, Excel and PowerPoint. Formatting, tables, charts and slide layouts stay intact because Microsoft renders them.
+*   **Google Docs Viewer** — a good fallback, and it handles PDF well.
 
-**[See Live Demo](https://bplugins.com/products/document-viewer/#demos "Demo")** 
-**[Buy The Pro](https://bplugins.com/products/document-viewer/pricing "Buy Pro version")** 
+Switch between them with a dropdown. No account and no API key for either.
 
-= Some Benefits =
+### What you can embed
 
-- Works perfectly in computers, tablets, and mobile phones.
-- You don’t need to convert Office files for the web (e.g., PDF, HTML).
-- Anyone can view Office files from your website or blog, even if they don’t have Office.
+**Word** — .doc, .docx
+**Excel** — .xls, .xlsx
+**PowerPoint** — .ppt, .pptx
+**PDF** — .pdf
 
-### Document Viewer Free Features:
+Files can come from your Media Library or from a direct URL.
 
-- 2 viewer types such as Google Doc Viewer or Microsoft Online Viewer
-- Add width and height to customize the layout of the Document.
+### Why people use this one
 
+*   **A spreadsheet that still looks like a spreadsheet.** Google's viewer often flattens Excel formatting. Microsoft's does not.
+*   **No conversion.** You do not turn a .docx into a PDF or an HTML table first. Upload the file you already have.
+*   **Visitors do not need Office.** They read it in the browser, on a phone as easily as a desktop.
+*   **It stays small.** One shortcode, one block, a handful of settings. If you want a document library, a flipbook and sixteen file formats, that is a different plugin.
 
-### Document Viewer Pro Features
+### Who uses it for what
 
-- Choose Document From Google Drive
-- Choose Document From OneDrive
-- Choose Document From Dropbox
-- View Document by Google Doc Viewer
-- Disable/Enable Pop-out
-- Show/Hide File Name in Top
-- Show/Hide Download Button on Top
-- Disable/Enable Right Click
+*   **Schools and training sites** — handouts and slide decks students read in the browser.
+*   **Theatre, events and clubs** — schedules and scripts shared with cast and crew.
+*   **Accountants and consultants** — rate cards and spreadsheets a client reads without downloading.
+*   **Councils and associations** — minutes, forms and policies published as the Word files they already keep.
+*   **Internal pages** — a price list or process document embedded on a members-only page.
 
+### How to add a document
 
-### User Feedback
+**Gutenberg block**
 
-#### ⭐⭐⭐⭐⭐ [Impressively Stable](https://wordpress.org/support/topic/impressively-stable/)
+1.  Open any post or page in the Block Editor.
+2.  Add the **Document Viewer** block.
+3.  Upload a file or paste a URL, choose the viewer, set the size.
 
-❛❛***Nice wp plugin ever. I’ve use it for 4 years.***❜❜
+The block settings are grouped into four panels — Document Source, Viewer Engine, Display Dimensions, and Security Restrictions — so you are not hunting through one long sidebar.
 
-***-[aircess](https://wordpress.org/support/users/aircess/)***
+**Shortcode**
 
+Use `[office_doc]` anywhere shortcodes run, including Elementor, Divi, Bricks, WPBakery, Beaver Builder and Oxygen. Generate one from the document's edit screen and paste it in.
 
-#### ⭐⭐⭐⭐⭐ [Does the job well.](https://wordpress.org/support/topic/does-the-job-well-131/)
+### Free features
 
-❛❛***This plugin works fine***❜❜
+*   **Two viewer engines** — Microsoft Office Web Viewer and Google Docs Viewer.
+*   **Gutenberg block** with grouped settings panels.
+*   **`[office_doc]` shortcode** for the Classic Editor and page builders.
+*   **Custom width and height** so the viewer fits your layout.
+*   **Dedicated document screen** for managing the files you embed.
 
-***-[muhammadarooj](https://wordpress.org/support/users/muhammadarooj/)***
+### Document Viewer Pro
 
+*   **Cloud sources** — pick documents straight from **Google Drive**, **OneDrive** or **Dropbox**.
+*   **Download button** — show a download button on the toolbar, or leave it off.
+*   **Filename display** — show or hide the document title above the viewer.
+*   **Pop-out control** — stop visitors opening the document in a separate window.
+*   **Content protection** — disable right-click, text selection and the Ctrl/Cmd + C, A, S, P shortcuts.
+*   **Full-screen control** — allow or block full-screen viewing.
 
-#### ⭐⭐⭐⭐⭐ [Exactly What I Need](https://wordpress.org/support/topic/exactly-what-i-need-161/)
+[**See the Pro features**](https://bplugins.com/products/document-viewer/pricing)
 
-❛❛***I am a theatre director and I use my website to communicate with my performers and technical crews.
+### What users say
 
-I wanted to SHOW them documents in situ as well as enable them to easily download them and, after looking at other solutions, this plugin is PERFECT for this.
+**⭐⭐⭐⭐⭐ [Exactly What I Need](https://wordpress.org/support/topic/exactly-what-i-need-161/)**
+*"I am a theatre director and I use my website to communicate with my performers and technical crews. I wanted to SHOW them documents in situ as well as enable them to easily download them and, after looking at other solutions, this plugin is PERFECT for this. I am delighted with it and cannot recommend it highly enough."* — [jfortune](https://wordpress.org/support/users/jfortune/)
 
-I am delighted with it and cannot recommend it highly enough.***❜❜
+**⭐⭐⭐⭐⭐ [Impressively Stable](https://wordpress.org/support/topic/impressively-stable/)**
+*"Nice wp plugin ever. I've use it for 4 years."* — [aircess](https://wordpress.org/support/users/aircess/)
 
-***-[jfortune](https://wordpress.org/support/users/jfortune/)***
+**⭐⭐⭐⭐⭐ [Does the job well.](https://wordpress.org/support/topic/does-the-job-well-131/)**
+*"This plugin works fine"* — [muhammadarooj](https://wordpress.org/support/users/muhammadarooj/)
 
+Liked it? Disliked it? Want a feature? [**Send us your feedback**](https://bplugins.com/support/)
 
-#### - Did you like this plugin? Dislike it? Have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
+### Help translate this plugin
 
+Document Viewer runs on sites around the world. If you speak another language, you can help — no coding needed:
 
+https://translate.wordpress.org/projects/wp-plugins/embed-office-viewer/
 
-= How It Works = 
+New to translating? Start here: https://make.wordpress.org/polyglots/handbook/translating/first-steps/
 
-- Your Document will be embed in your site, blog via a iframe which is service of Office Web Viewer 
+### Other plugins by bPlugins
 
-- This plugin use Office Web Viewer service of Microsoft [Read More About Office Web viewer](http://officewebviewer.com "Read More") 
-- Terms Of Service : [Microsoft's Terms of service ](https://go.microsoft.com/fwlink/?LinkID=206977  "Terms") 
-- Privacy Policy:  [Microsoft's Privacy Policy ](https://go.microsoft.com/fwlink/?LinkId=521839  "Privacy")
+*   [**Document Embedder**](https://bplugins.com/products/document-embedder/) – 16+ file types, four viewers, 3D FlipBook and a searchable document library.
+*   [**PDF Poster**](https://bplugins.com/products/pdf-poster/) – display and embed PDF files in different styles.
+*   [**HTML5 Video Player**](https://bplugins.com/products/html5-video-player/) – single videos and playlists in multiple skins.
+*   [**HTML5 Audio Player**](https://bplugins.com/products/html5-audio-player/) – audio with visualisations.
+*   [**3D Viewer**](https://bplugins.com/products/3d-viewer/) – embed interactive 3D models and products.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+**From your dashboard**
 
-e.g.
+1.  Go to **Plugins → Add New**.
+2.  Search for **Document Viewer** by **bPlugins**.
+3.  Click **Install Now**, then **Activate**.
 
-1. Upload `plugin-directory` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Use shortcode in page, post or in widgets.
-4. <?php echo do_shortcode('YOUR_SHORTCODE'); ?>` in your templates
+**By upload**
 
+1.  Download the plugin zip from WordPress.org.
+2.  Go to **Plugins → Add New → Upload Plugin**.
+3.  Choose the zip, click **Install Now**, then **Activate**.
+
+**Adding your first document**
+
+1.  Go to **Document Viewer → Add New** in the admin menu.
+2.  Upload a Word, Excel, PowerPoint or PDF file, or paste a direct URL.
+3.  Choose the viewer engine and set the width and height.
+4.  Copy the `[office_doc]` shortcode and paste it into any post or page — or add the **Document Viewer** block in the Block Editor instead.
 
 == Frequently Asked Questions ==
 
-= Which type of document can I embed using that plugin? =
+= What is the shortcode? =
+`[office_doc]`. Generate the exact shortcode for a document from its edit screen, then paste it into any post, page, widget or page builder that supports shortcodes.
 
-Microsoft Word, Excel, And Powerpoint Document
+= Which file types can I embed? =
+Word (.doc, .docx), Excel (.xls, .xlsx), PowerPoint (.ppt, .pptx) and PDF. If you need images, code files, archives, 3D formats or a document library, use [Document Embedder](https://wordpress.org/plugins/document-emberdder/) instead.
 
-= What should be the file extension to work perfectly with that plugin?  =
+= Do I need to convert my files first? =
+No. Upload the .docx, .xlsx or .pptx you already have. There is no conversion to PDF or HTML.
 
-'.ppt' '.pptx' '.doc', '.docx', '.xls', '.xlsx'
+= Do my visitors need Microsoft Office installed? =
+No. The file is rendered in the browser. Visitors need nothing installed, on desktop or mobile.
 
-= I Would like to support Your Project what is the best way to support?  =
+= Which viewer should I choose? =
+For Word, Excel and PowerPoint, use the **Microsoft Office Web Viewer** — it keeps the original formatting because it is Microsoft's own renderer. For PDF, the **Google Docs Viewer** is usually the better choice.
 
-Thanks for your interest. You can donate any amount by visiting  [Here](https://gum.co/wpdonate  "Donate Now")
+= Is my document sent to a third party? =
+Yes, and you should know exactly how. Both viewers work by passing your document's **public URL** to an external service — Microsoft's Office Web Viewer or Google Docs Viewer — which renders it in an iframe. See the **External Services** section below for the full detail. If your documents are confidential, this plugin is not the right choice; use a plugin that renders locally instead.
+
+= Does the document need to be publicly reachable? =
+Yes. Microsoft and Google fetch the file over the internet, so a file behind a login or on a local development site will not render.
+
+= Does it work with Elementor, Divi or another page builder? =
+Yes. Use the `[office_doc]` shortcode in any builder with a shortcode widget — Elementor, Divi, Bricks, WPBakery, Beaver Builder, Oxygen and others.
+
+= Can I show a download button? =
+The download button, along with filename display, pop-out control and content protection, is part of the Pro version.
+
+= Can I stop people copying the text? =
+Pro includes content protection — it disables right-click, text selection and the Ctrl/Cmd + C, A, S and P shortcuts. Treat it as a deterrent rather than real security: anything a browser can display can ultimately be copied.
+
+= Is there a file size limit? =
+There is no limit in the plugin itself, but very large files take longer for the external viewer to fetch and render. Files under about 20 MB are the most reliable.
 
 = Where do I report security bugs found in this plugin? =
-
-Please report security bugs found in the source code of the Document Viewer for Office plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fb774-c5c5-4253-bec9-fd5a4210d09b). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
-
+Please report security bugs found in the source code of the Document Viewer plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/9e5fb774-c5c5-4253-bec9-fd5a4210d09b). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Screenshots ==
 
-1. Sidebar menu
-2. Add new Doc / Configure Viewer
-3. ShortCode
-4. Output / Frontend preview
-5. Frontend preview of a excel File
-
+1. A Word document on the page — rendered by Microsoft's own Office Web Viewer, so tables, fonts and layout stay exactly as you saved them.
+2. An Excel sheet embedded in a post, with columns and formatting intact.
+3. The Document Viewer block — upload a file or paste a URL, pick a viewer, set the size, all in the sidebar.
+4. Block settings grouped into four panels: document source, viewer engine, display dimensions and security restrictions.
+5. Copy the shortcode from the document screen and paste it into any post, page or page builder.
 
 == Changelog ==
 
-= 2.4.2 - 11 August, 2026 =
-* Security: Updated Freemius SDK dependency to the latest version to patch identified vulnerabilities and ensure robust plugin security.
+= 2.4.2 - 11 August 2026 =
+* **Security:** Updated the Freemius SDK dependency to the latest version to patch identified vulnerabilities.
 
 = 2.4.1 - 27 June 2026 =
-* Update: Redesigned and integrated the new standardized help & demos admin dashboard.
+* **Update:** Redesigned and integrated the new standardized help and demos admin dashboard.
 
-= 2.4.0 - 3 June, 2026 =
-* New: Added 4 dedicated, modular settings panels (DocumentSource, ViewerEngine, DisplayDimensions, SecurityRestrictions) to group Gutenberg settings.
-* New: Added custom SVG icons inside the titles of the block settings panels.
-* Update: Redesigned Gutenberg block settings field titles to use friendly, concise terms for non-technical users.
-* Update: Consolidated admin assets enqueuing into a single class loader.
-* Update: Standardized core classes under `includes/core/` and helper files under lowercase `includes/helper/` to ensure namespace consistency.
-* Improvement: Integrated Composer autoloading to boot and resolve PHP dependencies dynamically.
-* Improvement: Unified the legacy shortcode rendering pipeline to run through the Gutenberg block rendering engine via the native `render_block()` API.
-* Improvement: Replaced the block settings TabPanel with separate, sequential settings panels.
-* Improvement: Applied a premium aesthetic theme color (#f1fdfe) for settings panel backgrounds and matching blue (#226df5) for panel header icons.
-* Improvement: Added detailed file format descriptions to simplify the document selector experience.
-* Improvement: Added a fixed height and smooth fade-in transition for the Upload Documents editor UI to prevent layout jumping on tab change.
-* Improvement: Reorganized metabox fields into two clean tabbed sections: "Document Settings" and "Security & Restrictions".
-* Fix: Resolved fatal error during plugins_loaded hook by replacing query loops with safe get_posts() in ImportMeta class.
-* Fix: Resolved cross-origin iframe console errors in block editor under content protection mode.
-* Fix: Resolved pop-out overlay alignment and responsiveness by using CSS container queries.
-* Fix: Resolved "Protect Content" text selection and keyboard shortcuts bypasses (Ctrl/Cmd + C, A, S, P).
-* Fix: Resolved "Disable Full Screen" and pop-out overlay styles targeting mismatches.
-* Fix: Resolved missing i18n translation wrappers on "Protect Content" toggle labels.
+= 2.4.0 - 3 June 2026 =
+* **New:** Added four dedicated settings panels (Document Source, Viewer Engine, Display Dimensions, Security Restrictions) to group the Gutenberg block settings.
+* **New:** Added custom SVG icons inside the block settings panel titles.
+* **Update:** Redesigned block settings field titles to use friendlier, clearer wording for non-technical users.
+* **Update:** Consolidated admin asset enqueuing into a single class loader.
+* **Update:** Standardized core classes under `includes/core/` and helper files under `includes/helper/` for namespace consistency.
+* **Improvement:** Integrated Composer autoloading to boot and resolve PHP dependencies dynamically.
+* **Improvement:** Unified the legacy shortcode rendering pipeline to run through the Gutenberg block rendering engine via the native `render_block()` API.
+* **Improvement:** Replaced the block settings TabPanel with separate, sequential settings panels.
+* **Improvement:** Added detailed file format descriptions to simplify the document selector.
+* **Improvement:** Added a fixed height and fade-in transition to the upload UI to prevent layout jumping on tab change.
+* **Improvement:** Reorganized metabox fields into two tabbed sections: Document Settings and Security & Restrictions.
+* **Fix:** Resolved a fatal error during the `plugins_loaded` hook by replacing query loops with `get_posts()` in the ImportMeta class.
+* **Fix:** Resolved cross-origin iframe console errors in the block editor under content protection mode.
+* **Fix:** Resolved pop-out overlay alignment and responsiveness using CSS container queries.
+* **Fix:** Resolved Protect Content bypasses via text selection and keyboard shortcuts (Ctrl/Cmd + C, A, S, P).
+* **Fix:** Resolved Disable Full Screen and pop-out overlay style targeting mismatches.
+* **Fix:** Resolved missing i18n translation wrappers on the Protect Content toggle labels.
 
+= 2.3.3 - 8 November 2025 =
+* **Update:** Improved the block editor upload options.
 
-= 2.3.3 - 8 November, 2025 =
-* Updated Block - Editor upload options 
+= 2.3.2 - 10 October 2025 =
+* **New:** Added a modern admin dashboard.
 
-= 2.3.2 - 10 October, 2025 =
-* Add Modern Dashboard and improved. 
+= 2.3.1 - 12 July 2025 =
+* **Fix:** Resolved reported issues.
 
-= 2.3.1 - 12 July, 2025 =
-* Fixed issues
+= 2.3.0 - 10 May 2025 =
+* **Fix:** Resolved the text domain issue.
+* **New:** Added a fully featured Gutenberg block.
 
-= 2.3.0 - 10 May, 2025 =
-* Fixed textdomain issue & add powerfull Gutenberg block
+= 2.2.10 - 29 January 2025 =
+* **Update:** Freemius WordPress SDK.
 
-= 2.2.10 - 29 Jan, 2025 =
-* Update: WordPress SDK
-
-= 2.2.9 - 04/07/2024 =
-* Update: WordPress SDK
+= 2.2.9 - 4 July 2024 =
+* **Update:** Freemius WordPress SDK.
 
 = 2.2.7 =
-* Update Freemius WordPress SDK
+* **Update:** Freemius WordPress SDK.
 
 = 2.2.5 =
-* Update Freemius WordPress SDK
+* **Update:** Freemius WordPress SDK.
 
 = 2.2.4 =
-* Fixed Height issue
+* **Fix:** Height issue.
 
-= 2.2.3 = 
-* Fixed Security issue
-* Imporved Performance
+= 2.2.3 =
+* **Security:** Fixed a security issue.
+* **Improvement:** Performance.
 
 = 2.0.9 =
-* PDF viewer support
-* Improved performance
+* **New:** PDF viewer support.
+* **Improvement:** Performance.
 
 = 1.1 =
-* Added doc management screen
-* Improved performance.
-* Gutenberg block support
+* **New:** Document management screen.
+* **New:** Gutenberg block support.
+* **Improvement:** Performance.
 
-= 1.0 =
-* Initial Release
+== Upgrade Notice ==
 
+= 2.4.2 =
+Security update. The bundled Freemius SDK has been updated to patch known vulnerabilities. All users are encouraged to update.
 
-== Source Code ==
+= 2.4.0 =
+Rebuilt block settings, a unified rendering engine for the block and shortcode, and fixes for content protection bypasses. Your existing documents and shortcodes are unchanged.
 
-You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository:
-[**Embed Office Viewer on GitHub**](https://github.com/bPlugins/embed-office-viewer-wp)
+== External Services ==
 
+This plugin relies on external services to render your documents. Please read this section before embedding anything confidential.
+
+= Microsoft Office Web Viewer =
+
+* **Service:** Microsoft Office Web Viewer – `https://view.officeapps.live.com`
+* **What it does:** Renders Word, Excel and PowerPoint files in an iframe on your page.
+* **What data is sent:** The **public URL of the document you embed** is passed to Microsoft, which then fetches and renders that file. Your visitor's browser connects directly to Microsoft's servers, so their IP address and browser details are visible to Microsoft. No WordPress user data is sent by the plugin.
+* **When:** Every time a page containing an embedded document is viewed, if the Microsoft viewer is selected.
+* **Terms of Service:** [https://go.microsoft.com/fwlink/?LinkID=206977](https://go.microsoft.com/fwlink/?LinkID=206977)
+* **Privacy Policy:** [https://go.microsoft.com/fwlink/?LinkId=521839](https://go.microsoft.com/fwlink/?LinkId=521839)
+
+= Google Docs Viewer =
+
+* **Service:** Google Docs Viewer – `https://docs.google.com/viewer`
+* **What it does:** Renders documents, including PDFs, in an iframe on your page.
+* **What data is sent:** The **public URL of the document you embed** is passed to Google, which then fetches and renders that file. Your visitor's browser connects directly to Google's servers, so their IP address and browser details are visible to Google. No WordPress user data is sent by the plugin.
+* **When:** Every time a page containing an embedded document is viewed, if the Google viewer is selected.
+* **Terms of Service:** [https://policies.google.com/terms](https://policies.google.com/terms)
+* **Privacy Policy:** [https://policies.google.com/privacy](https://policies.google.com/privacy)
+
+= bPlugins API =
+
+* **Service:** bPlugins product API – `https://api.bplugins.com`
+* **What it does:** When you open the plugin's admin dashboard, the plugin requests product information so it can display product cards, version information and upgrade options.
+* **What data is sent:** A request containing the product identifier. No personal data or site content is sent.
+* **When:** Only while an administrator is viewing the plugin's dashboard in wp-admin.
+* **Terms of Service:** [https://bplugins.com/terms-of-service/](https://bplugins.com/terms-of-service/)
+* **Privacy Policy:** [https://bplugins.com/privacy-policy/](https://bplugins.com/privacy-policy/)
+
+= WordPress.org Plugins API =
+
+* **Service:** WordPress.org Plugins Info API – `https://api.wordpress.org`
+* **What it does:** The dashboard queries the public WordPress.org Plugins API to list other plugins published by the author.
+* **What data is sent:** A public, read-only query. No personal data is sent.
+* **When:** Only while an administrator is viewing the plugin's dashboard in wp-admin.
+* **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
 == Third-Party Libraries ==
 
-This plugin bundles the following third-party JavaScript/PHP libraries.
-
-= Codestar Framework =
-* **Source:** [http://codestarframework.com/](http://codestarframework.com/)
-* **GitHub:** [https://github.com/Codestar/codestar-framework](https://github.com/Codestar/codestar-framework)
-* **License:** GPLv2 or later – [https://github.com/Codestar/codestar-framework/blob/master/LICENSE.md](https://github.com/Codestar/codestar-framework/blob/master/LICENSE.md)
-* **Purpose:** Provides the options framework for the plugin's settings and shortcode generator.
-
 = Freemius SDK =
+
 * **Source:** [https://freemius.com/](https://freemius.com/)
 * **GitHub:** [https://github.com/Freemius/wordpress-sdk](https://github.com/Freemius/wordpress-sdk)
 * **License:** GPLv3 – [https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt](https://github.com/Freemius/wordpress-sdk/blob/master/LICENSE.txt)
-* **Purpose:** Provides opt-in usage tracking and analytics to help improve the plugin.
-
-= bpl-tools =
-* Source / GitHub: https://github.com/bPlugins/bpl-tools
-* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
-* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
-* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
-
-
-
-
+* **Purpose:** Provides opt-in usage tracking, licensing and checkout functionality.
