@@ -3,7 +3,7 @@
  * Plugin Name: Document Viewer - Embed and Display Office and PDF Files
  * Plugin URI:  http://bplugins.com
  * Description: You can Embed Microsoft Word, Excel And Powerpodint File in wordpress Using 'Document Viewer for Office' Plugin.
- * Version: 2.4.2
+ * Version: 2.4.3
  * Author: bPlugins
  * Author URI: http://bPlugins.com
  * License: GPLv3
@@ -22,7 +22,7 @@ if ( function_exists( 'bpleov_fs' ) ) {
     // Setup Constants
     define( 'BPLEOV_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
     define( 'BPLEOV_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-    define( 'BPLEOV_VERSION', '2.4.2' );
+    define( 'BPLEOV_VERSION', '2.4.3' );
     define( 'BPLEOV_HAS_PRO', 'embed-office-viewer-premium/embed-office-viewer.php' === plugin_basename( __FILE__ ) );
 
     if ( ! function_exists( 'bpleov_fs' ) ) {
@@ -62,6 +62,10 @@ if ( function_exists( 'bpleov_fs' ) ) {
     // Load Composer Autoloader
     if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
         require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+    }
+
+    if (file_exists(BPLEOV_PLUGIN_PATH . 'includes/admin/class-bpleov-promo-banner.php')) {
+        require_once BPLEOV_PLUGIN_PATH . 'includes/admin/class-bpleov-promo-banner.php';
     }
 
     // Load Main Plugin Class

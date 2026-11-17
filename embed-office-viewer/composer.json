@@ -7,5 +7,25 @@
         "classmap": [
             "includes/"
         ]
+    },
+    "require": {
+        "oomphinc/composer-installers-extender": "^2.0",
+        "freemius/wordpress-sdk": "^2.13"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "oomphinc/composer-installers-extender": true
+        }
+    },
+    "extra": {
+        "installer-types": [
+            "library"
+        ],
+        "installer-paths": {
+            "vendor/freemius/": [
+                "freemius/wordpress-sdk"
+            ]
+        }
     }
 }

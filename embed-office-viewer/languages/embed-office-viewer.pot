@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Document Viewer - Embed and Display Office and PDF Files 2.4.2\n"
+"Project-Id-Version: Document Viewer - Embed and Display Office and PDF Files 2.4.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/embed-office-viewer\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-11T05:02:01+00:00\n"
+"POT-Creation-Date: 2026-11-17T04:02:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: embed-office-viewer\n"
@@ -136,6 +136,46 @@ msgstr ""
 
 #: includes/admin/class-bpleov-metabox-free.php:110
 msgid "Cloud API Settings"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:403
+msgid "Document Viewer's Biggest Black Friday Sale is Live!"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:404
+msgid "Save 45%"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:408
+msgid "Cloud Intrigation"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:409
+msgid "Custom PDF Viewer"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:410
+msgid "Content Protection"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:411
+msgid "Advanced Viewer Controls"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:417
+msgid "Grab The Deal Now →"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:424
+msgid "Dismiss"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:425
+msgid "Dismiss banner"
+msgstr ""
+
+#: includes/admin/class-bpleov-promo-banner.php:444
+msgid "Save 45% - Biggest Black Friday Sale"
 msgstr ""
 
 #: includes/core/class-bpleov-office-viewer.php:39

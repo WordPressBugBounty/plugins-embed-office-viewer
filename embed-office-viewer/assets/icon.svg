@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Document Viewer: a glass viewer screen that renders Word, Excel and PowerPoint files fed by a conveyor of DOC, XLS and PPT format chips">
+  <title>Document Viewer — a viewer screen rendering formats delivered on a chip conveyor</title>
+  <style>
+    :root { --eov: 3.6s; }
+    .eovConv { animation: eovConv var(--eov) linear infinite; }
+    .eovDoc  { animation: eovDoc var(--eov) ease-in-out infinite; }
+    .eovXls  { animation: eovXls var(--eov) ease-in-out infinite; }
+    .eovPpt  { animation: eovPpt var(--eov) ease-in-out infinite; }
+    .eovGlow { transform-box: fill-box; transform-origin: center; animation: eovGlow var(--eov) ease-in-out infinite; }
+    .eovBeam { animation: eovBeam var(--eov) ease-in-out infinite; }
+    @keyframes eovConv { 0%{transform:translateX(0)} 100%{transform:translateX(-180px)} }
+    @keyframes eovDoc  { 0%{opacity:1} 28%{opacity:1} 35%{opacity:0} 89%{opacity:0} 96%{opacity:1} 100%{opacity:1} }
+    @keyframes eovXls  { 0%{opacity:0} 28%{opacity:0} 35%{opacity:1} 61%{opacity:1} 68%{opacity:0} 100%{opacity:0} }
+    @keyframes eovPpt  { 0%{opacity:0} 61%{opacity:0} 68%{opacity:1} 89%{opacity:1} 96%{opacity:0} 100%{opacity:0} }
+    @keyframes eovGlow { 0%{opacity:.45;transform:scale(.95)} 50%{opacity:.8;transform:scale(1.05)} 100%{opacity:.45;transform:scale(.95)} }
+    @keyframes eovBeam { 0%{opacity:.25} 50%{opacity:.7} 100%{opacity:.25} }
+    @media (prefers-reduced-motion: reduce){ .eovConv,.eovDoc,.eovXls,.eovPpt,.eovGlow,.eovBeam{animation:none} }
+  </style>
+  <defs>
+    <clipPath id="eovClip"><rect x="0" y="0" width="256" height="256" rx="56"/></clipPath>
+    <clipPath id="eovScreen"><rect x="58" y="52" width="140" height="98" rx="8"/></clipPath>
+    <clipPath id="eovBelt"><rect x="26" y="182" width="204" height="40" rx="20"/></clipPath>
+    <linearGradient id="eovBgB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#146ef5"/>
+      <stop offset="1" stop-color="#6155f5"/>
+    </linearGradient>
+    <radialGradient id="eovHaloB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#dce4ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#dce4ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#eovClip)">
+    <rect x="0" y="0" width="256" height="256" fill="url(#eovBgB)"/>
+    <circle cx="66" cy="58" r="98" fill="#ffffff" opacity="0.08"/>
+    <ellipse class="eovGlow" cx="128" cy="100" rx="94" ry="70" fill="url(#eovHaloB)"/>
+
+    <!-- glass viewer card -->
+    <rect x="42" y="38" width="172" height="126" rx="18" fill="#ffffff" opacity="0.16"/>
+    <rect x="42" y="38" width="172" height="126" rx="18" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
+    <!-- screen -->
+    <rect x="58" y="52" width="140" height="98" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#eovScreen)">
+      <!-- DOC layout: text lines -->
+      <g class="eovDoc">
+        <rect x="72" y="66" width="52" height="8" rx="3" fill="#146ef5" opacity="0.9"/>
+        <rect x="72" y="82" width="112" height="6" rx="3" fill="#cbd3e6"/>
+        <rect x="72" y="94" width="100" height="6" rx="3" fill="#cbd3e6"/>
+        <rect x="72" y="106" width="112" height="6" rx="3" fill="#cbd3e6"/>
+        <rect x="72" y="118" width="84" height="6" rx="3" fill="#cbd3e6"/>
+        <rect x="72" y="130" width="96" height="6" rx="3" fill="#cbd3e6"/>
+      </g>
+      <!-- XLS layout: grid -->
+      <g class="eovXls">
+        <rect x="72" y="66" width="114" height="14" rx="2" fill="#1fa971" opacity="0.85"/>
+        <g fill="none" stroke="#d3dbe8" stroke-width="1.5">
+          <rect x="72" y="66" width="114" height="66" rx="2"/>
+          <line x1="110" y1="66" x2="110" y2="132"/>
+          <line x1="148" y1="66" x2="148" y2="132"/>
+          <line x1="72" y1="88" x2="186" y2="88"/>
+          <line x1="72" y1="110" x2="186" y2="110"/>
+        </g>
+      </g>
+      <!-- PPT layout: slide -->
+      <g class="eovPpt">
+        <rect x="72" y="66" width="60" height="9" rx="3" fill="#ef6c2e" opacity="0.9"/>
+        <rect x="72" y="82" width="72" height="6" rx="3" fill="#cbd3e6"/>
+        <rect x="72" y="94" width="112" height="34" rx="4" fill="#e7ecf6"/>
+        <circle cx="99" cy="111" r="11" fill="#ef6c2e" opacity="0.5"/>
+      </g>
+    </g>
+    <!-- view badge -->
+    <g class="eovBeam">
+      <circle cx="186" cy="64" r="9" fill="#146ef5"/>
+      <circle cx="186" cy="64" r="3.4" fill="#ffffff"/>
+      <path d="M180 64 q6 -6 12 0 q-6 6 -12 0 Z" fill="none" stroke="#ffffff" stroke-width="1.4"/>
+    </g>
+
+    <!-- beam from conveyor to screen -->
+    <rect class="eovBeam" x="123" y="150" width="10" height="34" rx="4" fill="#bcd0ff"/>
+
+    <!-- conveyor -->
+    <rect x="26" y="182" width="204" height="40" rx="20" fill="#0b1f5c" opacity="0.28"/>
+    <g clip-path="url(#eovBelt)">
+      <g class="eovConv">
+        <!-- chips: DOC blue, XLS green, PPT orange, repeating; shift = 180 (3 chips) for seamless loop -->
+        <g transform="translate(-40,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#2b7cff"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">DOC</text>
+        </g>
+        <g transform="translate(20,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#1fa971"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">XLS</text>
+        </g>
+        <g transform="translate(80,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#ef6c2e"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">PPT</text>
+        </g>
+        <g transform="translate(140,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#2b7cff"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">DOC</text>
+        </g>
+        <g transform="translate(200,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#1fa971"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">XLS</text>
+        </g>
+        <g transform="translate(260,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#ef6c2e"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">PPT</text>
+        </g>
+        <g transform="translate(320,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#2b7cff"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">DOC</text>
+        </g>
+        <g transform="translate(380,190)">
+          <rect x="0" y="0" width="44" height="24" rx="6" fill="#1fa971"/>
+          <text x="22" y="16" font-family="system-ui,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">XLS</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

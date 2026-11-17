@@ -6,10 +6,37 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit3454cafdbe9cd8a657da71eec2f30343
 {
+    public static $files = array (
+        '8d50dc88e56bace65e1e72f6017983ed' => __DIR__ . '/..' . '/freemius/start.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'O' =>
+        array (
+            'OomphInc\\ComposerInstallersExtender\\' => 36,
+        ),
+        'C' =>
+        array (
+            'Composer\\Installers\\' => 20,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'OomphInc\\ComposerInstallersExtender\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/oomphinc/composer-installers-extender/src',
+        ),
+        'Composer\\Installers\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
+    );
+
     public static $classMap = array (
         'BPLEOVPlugin' => __DIR__ . '/../..' . '/includes/core/class-bpleov-blocks.php',
         'BPLEOV\\Admin\\BPLEOV_Admin' => __DIR__ . '/../..' . '/includes/admin/class-bpleov-admin.php',
         'BPLEOV\\Admin\\BPLEOV_Chatbot' => __DIR__ . '/../..' . '/includes/admin/class-bpleov-chatbot.php',
+        'BPLEOV\\Admin\\BPLEOV_PromoBanner' => __DIR__ . '/../..' . '/includes/admin/class-bpleov-promo-banner.php',
         'BPLEOV\\BPLEOV_Main' => __DIR__ . '/../..' . '/includes/class-bpleov.php',
         'BPLEOV\\BPLEOV_MetaboxFree' => __DIR__ . '/../..' . '/includes/admin/class-bpleov-metabox-free.php',
         'BPLEOV\\Core\\BPLEOV_OfficeViewer' => __DIR__ . '/../..' . '/includes/core/class-bpleov-office-viewer.php',
@@ -21,6 +48,8 @@ class ComposerStaticInit3454cafdbe9cd8a657da71eec2f30343
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3454cafdbe9cd8a657da71eec2f30343::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3454cafdbe9cd8a657da71eec2f30343::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit3454cafdbe9cd8a657da71eec2f30343::$classMap;
 
         }, null, ClassLoader::class);
